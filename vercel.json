@@ -1,11 +1,31 @@
 {
     "headers": [
         {
-            "source": "/logo.svg",
+            "source": "*.svg",
             "headers": [
                 {
                     "key": "Cache-Control",
-                    "value": "max-age=20"
+                    "value": "public, max-age=20, must-revalidate"
+                }
+            ]
+        },
+        
+        {
+            "source": "*.png",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=20, must-revalidate"
+                }
+            ]
+        },
+
+        {
+            "source": "*.jpg",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=20, must-revalidate"
                 }
             ]
         }
