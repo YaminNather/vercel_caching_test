@@ -1,32 +1,16 @@
 {
     "headers": [
         {
-            "source": "*.svg",
+            "source": "/static/media/:image_name.png",
             "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "public, max-age=20, must-revalidate"
-                }
-            ]
-        },
-        
-        {
-            "source": "*.png",
-            "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "public, max-age=20, must-revalidate"
-                }
+                { "key": "Cache-Control", "value": "max-age=30" }
             ]
         },
 
         {
-            "source": "*.jpg",
+            "source": "/static/media/:vector_name.svg",
             "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "public, max-age=20, must-revalidate"
-                }
+                { "key": "Cache-Control", "value": "max-age=30" }
             ]
         }
     ]
